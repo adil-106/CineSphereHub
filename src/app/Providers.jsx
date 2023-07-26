@@ -13,7 +13,9 @@ export default function Providers({children}){
         // Thereafter, adding darkMode:"class" in tailwind.config.js
 
         <ThemeProvider enableSystem={true} attribute="class">
-            {children}
+            <div className="transition-colors duration-300 min-h-screen select-none dark:bg-gray-900 dark:text-gray-200 text-gray-900">
+                {children}
+            </div>
         </ThemeProvider>
     );
 }

@@ -4,7 +4,7 @@
 
 Node version can be checked using 
 ``` bash
-node --versiom
+node --version
 ```
 
 2 - The project was installed using

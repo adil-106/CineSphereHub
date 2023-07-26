@@ -15,7 +15,7 @@ export default function Header(){
                 <DarkModeSwitch/>
                 <Link href="/">
                     <h2>
-                        <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg hover:bg-black hover:text-amber-500">IMDb</span>
+                        <span className="text-2xl font-bold bg-amber-500 py-1 px-2 rounded-lg hover:bg-gray-900 hover:text-amber-500">IMDb</span>
                         <span className="text-xl hidden sm:inline px-1">Clone</span>
                     </h2>
                 </Link>
