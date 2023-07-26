@@ -20,6 +20,12 @@ This also installs TailwindCSS which is used for styling this project.
 ```bash
 npm install react-icons --save
 ```
+
+4 - The project uses next-themes to render dark/light mode
+
+```bash
+npm install next-themes
+```
   
 ## Running the project
 
