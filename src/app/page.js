@@ -1,11 +1,25 @@
-import Image from 'next/image'
+import Results from "./components/Results"
+const API_KEY = process.env.API_KEY;
 
-export default function Home() {
+export default async function Home({searchParams}) {
+  
+  const genre = searchParams.genre || "fetchTrending"; //Keeping default genre as Trending
+  const response = await fetch(`https://api.themoviedb.org/3/${genre==="fetchTopRated"?"movie/top_rated":"trending/all/week"}?api_key=${API_KEY}&language=english&page=1`,
+    {next:{revalidate:10000}}
+  );
+
+  if(!response.ok){
+    throw new Error("Failed to fetch movie data from TMDB database");
+  }
+  
+  const data = await response.json();
+  // console.log(data);
+  const results = data.results;
+  // console.log(results);
+
   return (
-    <div className="mx-auto max-w-6xl space-y-4 px-6">
-    <h1 className="text-2xl font-medium text-amber-500">Home Page</h1>
-    <p>Enter details here....</p>
-    <p>Enter details here....</p>
+    <div>
+      <Results results={results}/>
     </div>
   )
 }
