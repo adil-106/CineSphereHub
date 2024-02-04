@@ -8,7 +8,7 @@ import SearchBox from './components/SearchBox'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'CloudSphereHub',
+  title: 'CineSphereHub',
   description: 'This is a clone website of IMDb',
 }
 
